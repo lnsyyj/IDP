@@ -1,14 +1,13 @@
 # -*- coding: utf-8 -*-
-from awsauth import S3Auth
+from awsauth import
 import requests
 
-
-host = "192.168.122.100"
+host = "10.100.46.195"
 ep = "admin"
 
-s3uid = ""
-access = ""
-secret = ""
+s3uid = "lenovo"
+access = "8RD7LPKW2C1SA0JIR6OK"
+secret = "jZoOqGxvHD6Ym2QOhh96CUFc9dfHBLNla9Xhi6Rs"
 
 # metadata user
 url = "http://%s/%s/metadata/user"%(host, ep)
