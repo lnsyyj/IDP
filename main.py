@@ -10,4 +10,6 @@ if __name__ == '__main__':
     # bucket = s3_get_bucket(conn,get_s3_bucket())
     # objects_list = s3_list_all_objects_under_bucket(bucket)
     # s3_download_object_to_file(bucket,objects_list)
+    # ========================================
     raw_data_to_structured_data()
+    # mariadb_insert_stability_vdbench_data()

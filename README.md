@@ -46,3 +46,28 @@ create database
     `clustercapacitypercentage` double(11,0) DEFAULT NULL,
     PRIMARY KEY (`id`)
     ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+
+    pip install wheel
+    https://www.lfd.uci.edu/~gohlke/pythonlibs/
+    pip install MySQL_python-1.2.5-cp27-none-win_amd64.whl
+
+
+grafana:
+
+    wget https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana-4.6.3-1.x86_64.rpm
+    sudo yum install initscripts fontconfig urw-fonts -y
+    sudo rpm -Uvh grafana-4.6.3-1.x86_64.rpm
+
+    # start service
+    systemctl daemon-reload
+    systemctl start grafana-server
+    systemctl status grafana-server
+    sudo systemctl enable grafana-server.service
+
+    # log location
+    tailf /var/log/grafana/grafana.log
+
+    # grafana configuration file position
+    /etc/sysconfig/grafana-server
+    /etc/grafana/grafana.ini
