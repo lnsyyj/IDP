@@ -3,6 +3,7 @@
 
 # from src.s3.connect import *
 from src.process import *
+import platform
 
 if __name__ == '__main__':
     # conn = s3_connect()
@@ -12,4 +13,5 @@ if __name__ == '__main__':
     # s3_download_object_to_file(bucket,objects_list)
     # ========================================
     raw_data_to_structured_data()
+    # print '-'.join('G20-杭州峰会-放假时间-放假安排'.split('-')[1:])
     # mariadb_insert_stability_vdbench_data()

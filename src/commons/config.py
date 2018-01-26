@@ -5,12 +5,20 @@ import os
 
 class global_var(object):
     '''global var'''
+
     # S3 Configuration
     s3_server = "10.100.46.195"
     s3_access_key = "8RD7LPKW2C1SA0JIR6OK"
     s3_secret_key = "jZoOqGxvHD6Ym2QOhh96CUFc9dfHBLNla9Xhi6Rs"
+
+    # result.log
     s3_bucket = "ceph-stability"
     s3_download_object_to_file_local_directory = "F:\\"      #windows
+    s3_directory_percentage = 80
+
+    # cpu mem log
+    # s3_bucket = "cpu-mem"
+    # s3_download_object_to_file_local_directory = "F:\\"  # windows
 
     # MySQL or MariaDB Configuration
     mysql_ip = "10.100.46.195"
@@ -38,6 +46,9 @@ def get_s3_bucket():
 
 def get_s3_download_object_to_file_local_directory():
     return global_var.s3_download_object_to_file_local_directory
+
+def get_s3_directory_percentage():
+    return global_var.s3_directory_percentage
 
 def get_mysql_ip():
     return global_var.mysql_ip

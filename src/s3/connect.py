@@ -22,7 +22,8 @@ def s3_get_bucket(conn_obj,bucket_name):
     return bucket_obj
 
 def s3_list_all_objects_under_bucket(bucket_obj):
-    objects_list = bucket_obj.list(prefix = "vdbench/30/result/")
+    # objects_list = bucket_obj.list(prefix = "cpu-mem/")
+    objects_list = bucket_obj.list(prefix="vdbench/" + str(get_s3_directory_percentage()) + "/result/")
     for obj in objects_list:
         print obj
     return objects_list
@@ -36,6 +37,6 @@ def s3_download_object_to_file(bucket_obj, file_object):
             if os.path.exists(f.name.replace('/', '\\')) == False:
                 os.makedirs(get_s3_download_object_to_file_local_directory() + f.name)
             continue
-        print f.name
+        print "s3_download_object_to_file : " + f.name
         key = bucket_obj.get_key(f.name)
         key.get_contents_to_filename( get_s3_download_object_to_file_local_directory() + f.name.replace('/','\\'))
