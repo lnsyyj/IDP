@@ -7,7 +7,7 @@ class global_var(object):
     '''global var'''
 
     # S3 Configuration
-    s3_server = "10.100.46.195"
+    s3_server = "192.168.199.151"
     s3_access_key = "8RD7LPKW2C1SA0JIR6OK"
     s3_secret_key = "jZoOqGxvHD6Ym2QOhh96CUFc9dfHBLNla9Xhi6Rs"
 
@@ -21,7 +21,7 @@ class global_var(object):
     # s3_download_object_to_file_local_directory = "F:\\"  # windows
 
     # MySQL or MariaDB Configuration
-    mysql_ip = "10.100.46.195"
+    mysql_ip = "192.168.199.151"
     mysql_port = "3306"
     mysql_account = "root"
     mysql_password = "root"
