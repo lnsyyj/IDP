@@ -20,7 +20,6 @@ def parse_vdbench_result_file(file_object):
                     mariadb_insert_stability_vdbench_data(rs_data, file_name)
                 line = file.readline()
 
-
 def parse_cpu_mem_result_file(file_object):
     result_dict = {}
     for f in file_object:
